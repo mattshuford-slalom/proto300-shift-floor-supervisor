@@ -1,0 +1,48 @@
+{
+  "shiftId": "2026-09-02-DAY",
+  "line": "Line A",
+  "sections": [
+    {
+      "id": "ppe",
+      "title": "Personal Protective Equipment",
+      "icon": "mdi-hard-hat",
+      "items": [
+        { "id": "ppe-1", "label": "Safety glasses worn by all floor staff", "checked": false, "required": true },
+        { "id": "ppe-2", "label": "Hearing protection available at loud stations", "checked": false, "required": true },
+        { "id": "ppe-3", "label": "Cut-resistant gloves stocked", "checked": false, "required": false },
+        { "id": "ppe-4", "label": "Steel-toe footwear compliance verified", "checked": false, "required": true }
+      ]
+    },
+    {
+      "id": "equipment",
+      "title": "Equipment & Machine Guarding",
+      "icon": "mdi-cog",
+      "items": [
+        { "id": "eq-1", "label": "Machine guards in place and undamaged", "checked": false, "required": true },
+        { "id": "eq-2", "label": "E-stop buttons accessible and tested", "checked": false, "required": true },
+        { "id": "eq-3", "label": "Lockout/tagout stations stocked", "checked": false, "required": true },
+        { "id": "eq-4", "label": "No visible fluid leaks around machinery", "checked": false, "required": false }
+      ]
+    },
+    {
+      "id": "housekeeping",
+      "title": "Housekeeping & Walkways",
+      "icon": "mdi-broom",
+      "items": [
+        { "id": "hk-1", "label": "Aisles clear of obstructions", "checked": false, "required": true },
+        { "id": "hk-2", "label": "Spill kits stocked and accessible", "checked": false, "required": false },
+        { "id": "hk-3", "label": "Waste bins below fill line", "checked": false, "required": false }
+      ]
+    },
+    {
+      "id": "emergency",
+      "title": "Emergency Readiness",
+      "icon": "mdi-fire-extinguisher",
+      "items": [
+        { "id": "em-1", "label": "Fire extinguishers charged and unobstructed", "checked": false, "required": true },
+        { "id": "em-2", "label": "Exit routes illuminated and clear", "checked": false, "required": true },
+        { "id": "em-3", "label": "First aid kit fully stocked", "checked": false, "required": false }
+      ]
+    }
+  ]
+}

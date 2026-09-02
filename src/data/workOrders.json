@@ -1,0 +1,86 @@
+[
+  {
+    "id": "WO-4821",
+    "title": "Gearbox Housing — CNC Mill Run",
+    "line": "Line A · CNC Cell 2",
+    "status": "in-progress",
+    "priority": "high",
+    "dueTime": "14:30",
+    "quantity": 120,
+    "completed": 74,
+    "assignee": "M. Ortega",
+    "note": "Coolant level checked at 11:00"
+  },
+  {
+    "id": "WO-4822",
+    "title": "Bracket Weld Assembly",
+    "line": "Line B · Weld Station 1",
+    "status": "blocked",
+    "priority": "high",
+    "dueTime": "13:00",
+    "quantity": 60,
+    "completed": 22,
+    "assignee": "K. Nguyen",
+    "note": "Waiting on argon tank swap"
+  },
+  {
+    "id": "WO-4823",
+    "title": "Panel Powder Coat Batch",
+    "line": "Line C · Finishing",
+    "status": "complete",
+    "priority": "medium",
+    "dueTime": "10:15",
+    "quantity": 200,
+    "completed": 200,
+    "assignee": "T. Brooks",
+    "note": "QC passed, moved to staging"
+  },
+  {
+    "id": "WO-4824",
+    "title": "Hydraulic Manifold Torque",
+    "line": "Line A · Assembly 4",
+    "status": "in-progress",
+    "priority": "medium",
+    "dueTime": "15:45",
+    "quantity": 45,
+    "completed": 18,
+    "assignee": "R. Patel",
+    "note": "Torque wrench recalibrated 09:30"
+  },
+  {
+    "id": "WO-4825",
+    "title": "Conveyor Belt Splice",
+    "line": "Line D · Maintenance",
+    "status": "blocked",
+    "priority": "low",
+    "dueTime": "16:30",
+    "quantity": 1,
+    "completed": 0,
+    "assignee": "J. Alvarez",
+    "note": "Parts on order, ETA next shift"
+  },
+  {
+    "id": "WO-4826",
+    "title": "Sensor Harness Crimp",
+    "line": "Line B · Sub-Assembly",
+    "status": "in-progress",
+    "priority": "low",
+    "dueTime": "17:00",
+    "quantity": 300,
+    "completed": 145,
+    "assignee": "D. Kim",
+    "note": "Running ahead of schedule"
+  },
+  {
+    "id": "WO-4827",
+    "title": "Chassis Frame Inspection",
+    "line": "Line C · QC Bay",
+    "status": "complete",
+    "priority": "high",
+    "dueTime": "11:45",
+    "quantity": 30,
+    "completed": 30,
+    "assignee": "S. Reyes",
+    "note": "2 units flagged for rework"
+  }
+]

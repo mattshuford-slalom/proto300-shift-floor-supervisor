@@ -1,0 +1,10 @@
+{
+  "incoming": {
+    "shiftId": "2026-09-02-NIGHT",
+    "fromSupervisor": "L. Castillo",
+    "toSupervisor": "You (Day Shift)",
+    "timestamp": "2026-09-02T06:02:00",
+    "notes": "Line B weld station had intermittent argon flow overnight — flagged for maintenance, tank swap pending. Line A ran clean. WO-4827 chassis inspection found 2 units needing rework, staged near QC bay. Staffing short one operator on Line D, covered with overtime. Coolant on CNC Cell 2 topped off at 04:00.",
+    "tags": ["equipment", "staffing", "quality"]
+  }
+}
