@@ -29,12 +29,19 @@ export const useWorkOrdersStore = defineStore('workOrders', {
     setFilter(filter) {
       this.activeFilter = filter
     },
-    cycleStatus(id) {
+    advance(id) {
       const order = this.orders.find((o) => o.id === id)
       if (!order) return
-      const next = (STATUS_ORDER.indexOf(order.status) + 1) % STATUS_ORDER.length
-      order.status = STATUS_ORDER[next]
-      if (order.status === 'complete') order.completed = order.quantity
+      const idx = STATUS_ORDER.indexOf(order.status)
+      if (idx < STATUS_ORDER.length - 1) {
+        order.status = STATUS_ORDER[idx + 1]
+        if (order.status === 'complete') order.completed = order.quantity
+      }
+    },
+    reopen(id) {
+      const order = this.orders.find((o) => o.id === id)
+      if (!order) return
+      order.status = 'in-progress'
     },
     setStatus(id, status) {
       const order = this.orders.find((o) => o.id === id)

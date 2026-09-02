@@ -4,6 +4,13 @@ export const STATUS_META = {
   complete: { label: 'Complete', color: 'success', icon: 'mdi-check-circle' },
 }
 
+// The next best action a supervisor should take from each status.
+export const NEXT_ACTION = {
+  blocked: { label: 'Unblock & Start', icon: 'mdi-play-circle', color: 'warning' },
+  'in-progress': { label: 'Mark Complete', icon: 'mdi-check-circle', color: 'success' },
+  complete: null,
+}
+
 export const PRIORITY_META = {
   high: { label: 'High', color: 'error' },
   medium: { label: 'Medium', color: 'warning' },

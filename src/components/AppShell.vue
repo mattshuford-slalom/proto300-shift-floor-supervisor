@@ -10,6 +10,7 @@ import WorkOrdersView from '../views/WorkOrdersView.vue'
 import SafetyChecklistView from '../views/SafetyChecklistView.vue'
 import HandoffNotesView from '../views/HandoffNotesView.vue'
 import IssueFlagSheet from './IssueFlagSheet.vue'
+import SplashOverlay from './SplashOverlay.vue'
 
 const vTheme = useTheme()
 const themeStore = useThemeStore()
@@ -30,6 +31,7 @@ watch(
 const tab = ref('orders')
 const shiftMenu = ref(false)
 const issueSheet = ref(false)
+const splash = ref(true)
 
 const tabs = {
   orders: { title: 'Work Orders', icon: 'mdi-clipboard-list-outline' },
@@ -122,6 +124,8 @@ const checklistBadge = computed(() =>
     </v-bottom-navigation>
 
     <IssueFlagSheet v-model="issueSheet" />
+
+    <SplashOverlay v-model="splash" />
 
     <!-- Shift / Line selector -->
     <v-bottom-sheet v-model="shiftMenu" inset>
