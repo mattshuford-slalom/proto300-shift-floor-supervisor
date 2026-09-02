@@ -39,7 +39,7 @@ const tabs = {
   handoff: { title: 'Shift Handoff', icon: 'mdi-swap-horizontal' },
 }
 
-const currentTitle = computed(() => tabs[tab.value].title)
+const currentTitle = computed(() => (tabs[tab.value] || tabs.orders).title)
 
 const blockedCount = computed(() => workOrders.counts.blocked)
 const checklistBadge = computed(() =>

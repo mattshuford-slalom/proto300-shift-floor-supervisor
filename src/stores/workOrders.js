@@ -5,7 +5,7 @@ const STATUS_ORDER = ['blocked', 'in-progress', 'complete']
 
 export const useWorkOrdersStore = defineStore('workOrders', {
   state: () => ({
-    orders: JSON.parse(JSON.stringify(seed)),
+    orders: JSON.parse(JSON.stringify(seed)).map((o) => ({ ...o, updates: [] })),
     activeFilter: 'all',
   }),
   getters: {
@@ -42,6 +42,27 @@ export const useWorkOrdersStore = defineStore('workOrders', {
       const order = this.orders.find((o) => o.id === id)
       if (!order) return
       order.status = 'in-progress'
+    },
+    logUnits(id, delta) {
+      const order = this.orders.find((o) => o.id === id)
+      if (!order) return
+      const prev = order.completed
+      order.completed = Math.min(order.quantity, Math.max(0, order.completed + delta))
+      const applied = order.completed - prev
+      if (applied !== 0) {
+        order.updates.unshift({
+          time: new Date().toISOString(),
+          type: 'units',
+          text: `${applied > 0 ? '+' : ''}${applied} units logged (${order.completed}/${order.quantity})`,
+        })
+      }
+    },
+    addUpdate(id, text) {
+      const order = this.orders.find((o) => o.id === id)
+      if (!order) return
+      const t = text.trim()
+      if (!t) return
+      order.updates.unshift({ time: new Date().toISOString(), type: 'note', text: t })
     },
     setStatus(id, status) {
       const order = this.orders.find((o) => o.id === id)

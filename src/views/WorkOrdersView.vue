@@ -25,7 +25,8 @@ const openCount = computed(
         {{ openCount }} work order{{ openCount === 1 ? '' : 's' }} need your attention
       </div>
       <div class="text-caption">
-        Use the button on each card to move it forward: Unblock &amp; Start &rarr; Mark Complete.
+        Move each card forward with its button. On in-progress orders you can log
+        units or add progress notes before marking complete.
       </div>
     </v-alert>
     <v-alert
@@ -55,6 +56,8 @@ const openCount = computed(
         :order="order"
         @advance="store.advance"
         @reopen="store.reopen"
+        @log-units="store.logUnits"
+        @add-update="store.addUpdate"
       />
     </v-slide-y-transition>
 
